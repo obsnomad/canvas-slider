@@ -3,15 +3,14 @@ import { ref } from 'vue';
 import CanvasSlider from './components/CanvasSlider.vue';
 
 const snap = ref(false);
+const baseUrl = import.meta.env.BASE_URL;
+const items = ['0.jpg', '1.jpg', '2.jpg', '3.jpg'].map((name) => `${baseUrl}images/${name}`);
 </script>
 
 <template>
   <main>
     <section>
-      <CanvasSlider
-        :items="['/images/0.jpg', '/images/1.jpg', '/images/2.jpg', '/images/3.jpg']"
-        :snap="snap"
-      />
+      <CanvasSlider :items="items" :snap="snap" />
       <span class="note">Drag to change image</span>
       <label><input v-model="snap" type="checkbox" /> Enable slide snapping</label>
     </section>
