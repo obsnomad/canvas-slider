@@ -1,47 +1,46 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+<script lang="ts" setup>
+import { ref } from 'vue';
+import CanvasSlider from './components/CanvasSlider.vue';
+
+const snap = ref(false);
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
   <main>
-    <TheWelcome />
+    <section>
+      <CanvasSlider
+        :items="[
+          '/images/image-1.jpg',
+          '/images/image-2.jpg',
+          '/images/image-3.jpg',
+          '/images/image-4.jpg',
+        ]"
+        :snap="snap"
+      />
+      <span class="note">Drag to change image</span>
+      <label><input v-model="snap" type="checkbox" /> Enable slide snapping</label>
+    </section>
   </main>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
+main {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+.note {
+  color: var(--color-heading);
+  font-size: 1.25rem;
 }
 </style>
