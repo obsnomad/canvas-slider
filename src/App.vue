@@ -9,12 +9,7 @@ const snap = ref(false);
   <main>
     <section>
       <CanvasSlider
-        :items="[
-          '/images/image-1.jpg',
-          '/images/image-2.jpg',
-          '/images/image-3.jpg',
-          '/images/image-4.jpg',
-        ]"
+        :items="['/images/0.jpg', '/images/1.jpg', '/images/2.jpg', '/images/3.jpg']"
         :snap="snap"
       />
       <span class="note">Drag to change image</span>

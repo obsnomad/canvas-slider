@@ -4,7 +4,7 @@ import { nextTick } from 'vue';
 
 import CanvasSlider from './CanvasSlider.vue';
 
-const items = ['/images/image-1.jpg', '/images/image-2.jpg', '/images/image-3.jpg'];
+const items = ['/images/0.jpg', '/images/1.jpg', '/images/2.jpg'];
 
 async function dispatchPointer(
   element: Element,

@@ -1,23 +1,56 @@
 # canvas-slider
 
-A Vue.js Canvas API slider demo.
+Image slider implemented with Vue + Canvas API.
 
-## Project Setup
+## Assignment Coverage
+
+- Slider is rendered in a single `<canvas>` element (`src/components/CanvasSlider.vue`).
+- Uses four images with mixed dimensions (`public/images/0.jpg` to `public/images/3.jpg`).
+- Supports drag interaction to change images.
+- Built release is included in `dist/` and can be served as static files.
+- Additional controls to snap slides (optional).
+
+## Browser Support
+
+Verified on latest:
+
+- Chrome
+- Firefox
+- Chrome Mobile
+
+## Setup
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+## Development
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+## Quality Checks
+
+```sh
+npm run lint
+npm run test
+```
+
+## Build
 
 ```sh
 npm run build
 ```
 
-`dist` is also included in build for a quick run without a compilation step.
+## Run Built Release (static server)
+
+```sh
+npx nws dist
+```
+
+Alternative:
+
+```sh
+npx serve dist
+```

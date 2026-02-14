@@ -299,10 +299,10 @@ onBeforeUnmount(() => {
 <style scoped>
 .slider {
   --slider-loading-text-color: var(--color-text);
-  width: min(40rem, 90vw);
+  width: min(50rem, 90vw);
   height: min(calc(100vh - 2rem), 35rem);
   margin: 0 auto;
-  border-radius: 1rem;
+  border: 1px solid var(--color-border);
   overflow: hidden;
   background: var(--color-background-soft);
 }
